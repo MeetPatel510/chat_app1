@@ -21,16 +21,7 @@ class AuthHelper {
       if (data.emailPhone!.contains('@')) {
         userCredential = await auth.signInWithEmailAndPassword(
             email: data.emailPhone!, password: data.password!);
-            // List image = [1,2,3,4,5];
-            // image.shuffle();
-      // FirestoreHelper().addUser(user: {
-      //   "name":(userCredential.user?.displayName == null)
-      //       ? userCredential.user?.email?.split("@")[0]
-      //       : userCredential.user?.displayName,
-      //       "email":userCredential.user?.email,
-      //       "uid":userCredential.user?.uid,
-      //       // "image":image[0]
-      // });
+           
       }
       res['user'] = userCredential?.user;
     } on FirebaseAuthException catch (e) {
